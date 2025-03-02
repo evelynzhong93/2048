@@ -28,6 +28,7 @@ h1.title {
     float: left;
 }
 
+/* for specific user agents */
 @-webkit-keyframes move-up {
     0% {
         top: 25px;
@@ -64,13 +65,13 @@ h1.title {
     }
 }
 
-.scores-container {
+.scoreboard {
     float: right;
     text-align: right;
 }
 
-.score-container,
-.best-container {
+.score,
+.record {
     position: relative;
     display: inline-block;
     background: #bbada0;
@@ -85,8 +86,8 @@ h1.title {
     text-align: center;
 }
 
-.score-container:after,
-.best-container:after {
+.score:after,
+.record:after {
     position: absolute;
     width: 100%;
     top: 10px;
@@ -98,8 +99,9 @@ h1.title {
     color: #eee4da;
 }
 
-.score-container .score-addition,
-.best-container .score-addition {
+/* i dont see score-addition in html? */
+.score .score-addition,
+.record .score-addition {
     position: absolute;
     right: 30px;
     color: red;
@@ -116,11 +118,11 @@ h1.title {
     animation-fill-mode: both;
 }
 
-.score-container:after {
+.score:after {
     content: "Score";
 }
 
-.best-container:after {
+.record:after {
     content: "Best";
 }
 
@@ -679,7 +681,7 @@ hr {
     }
 }
 
-.tile-merged .tile-inner {
+.tiintrole-merged .tile-inner {
     z-index: 20;
     -webkit-animation: pop 200ms ease 100ms;
     -moz-animation: pop 200ms ease 100ms;
@@ -695,7 +697,7 @@ hr {
     clear: both;
 }
 
-.game-intro {
+.game- {
     float: left;
     line-height: 42px;
     margin-bottom: 0;
@@ -715,7 +717,7 @@ hr {
     float: right;
 }
 
-.game-explanation {
+.instruction {
     margin-top: 50px;
 }
 
@@ -741,8 +743,8 @@ hr {
         margin: 0 auto;
     }
 
-    .score-container,
-    .best-container {
+    .score,
+    .record {
         margin-top: 0;
         padding: 15px 10px;
         min-width: 40px;
@@ -752,7 +754,7 @@ hr {
         margin-bottom: 10px;
     }
 
-    .game-intro {
+    .description {
         width: 55%;
         display: block;
         box-sizing: border-box;
