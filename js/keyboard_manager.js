@@ -1,4 +1,4 @@
-class keyboardManager {
+class KeyboardManager {
     constructor() {
         this.events = {}
     }
